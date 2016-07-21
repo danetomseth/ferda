@@ -1,0 +1,34 @@
+
+<section id="chat" class="row">
+<div class="col-md-1">
+</div>
+<div ng-controller="ChatController" class="container col-md-10 text-wrapper">
+<div class="page-header"><h2 class="">Logged in as:{{currentUser.username}}</h2>
+</div>
+<div class="col-md-12 text-container chat-container row" id="scrollBox">
+	
+	<ul class="text-list clearfix" id="chatBubbles" ng-model="chatBox">
+		<!-- <div class="bubble-box clearfix" ng-show="showRecent" ng-repeat="text in recentChats">
+			<p class="user-tag clearfix" ng-class="{left: isUser, right: notUser}">{{text.username}}</p><p class="chat-box-right">{{text.content}} - <small>{{ chat.date |  date: "MM/dd 'at' h:mma"}}</small></p>
+		</div> -->
+		<div class="bubble-box clearfix" ng-repeat="chat in chatArr" ng-model="bubbleStyle">
+			<p class="user-tag clearfix" ng-class="rowClass(chat.username)">{{chat.username}}</p>
+			<p class="chat-box-right" ng-class="rowClass(chat.username)">{{chat.content}} - <small>{{ chat.date |  date: "MM/dd 'at' h:mma"}}</small></p>
+		</div>
+	</ul>
+</div>
+<form  class="form-inline" ng-submit="submit()">
+	<div class="form-group buffer">
+		<div class="input-group input-group-lg">
+			<label for="TextInput" class="sr-only"></label>
+			<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+			<input type="text" name="textarea" autofocus="autofocus" placeholder="Text Area" class="form-control" ng-model="text"></label>
+
+		</div>
+		<button type="submit" class="btn btn-lg" ng-click="submit()">Send</button>
+	</div>
+</form>
+</div>
+<div class="col-md-1">
+</div>
+</section>

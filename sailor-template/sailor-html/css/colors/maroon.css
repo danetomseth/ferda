@@ -1,0 +1,117 @@
+/*===========================================*/
+/* This is the Custom Color Style for Sailor Theme
+/* Theme Author: Jenn and Lian and Tahn
+/* Theme URL: ThemeForces
+/* Colour: Maroon
+/* NOTE: 	Please do not re-arrange any of the codes provided. Always, place the new code or 
+			edited codes in the last part of this style to avoid conflicts.
+==============================================*/
+
+/* @ #842221 (Lighter)
+******************************/
+#blog-nav .next-btn.control-nav.active,
+#blog-nav .next-btn.control-nav:hover,
+#blog-nav .next-btn.control-nav:focus,
+#blog-nav .prev-btn.control-nav.active,
+#blog-nav .prev-btn.control-nav:hover,
+#blog-nav .prev-btn.control-nav:focus,
+.control-nav.active,
+.control-nav:hover,
+.control-nav:focus,
+#menu>img,
+.color-highlight:hover{
+    background: #842221;
+}
+
+.contact-btn  {
+    background: #842221;
+    border-color: #842221;
+}
+#about #about-slider .carousel-caption > ul.social-media li>a:hover{
+    color: #842221!important;
+}
+
+/* @ #771718 (Dark)
+******************************/
+#navigation,
+#objectives .quote,
+#blog-nav .next-btn.control-nav,
+.control-nav,
+.tab.active,
+.tab:hover,
+.tab:focus{
+    background: #771718
+}
+
+span.meta-place,
+span.meta-date,
+ul.events>li>i,
+a,
+a:hover,
+a:focus{
+    color:  #771718
+}
+
+/* @ #6A1516 (Darker)
+******************************/
+.text-overlay,
+.tab,
+.large-box .hover-text,
+.blog-box .hover-text a.btn.read-more-btn:hover, 
+a.btn.btn1:hover,
+ul.qcontrols li,
+.static,
+.blog-button,
+.page-title-bar,
+.gallery .large-box .hover-text.on,
+#hero,
+.color-highlight,
+#blog-nav .prev-btn.control-nav,
+.alert-danger,
+.alert-success{
+    background-color: #6A1516
+}
+.small-box .hover-text,
+.small-box a.btn.read-more-btn, 
+a.btn.btn2,
+#about #about-slider .carousel-caption,
+.small-box a,
+#about #about-slider .carousel-caption > ul.social-media li>a,
+ul.contact-info,
+.blog-box .hover-text h2,
+.blog-box a,
+p.help-block.text-danger { 
+	color: #6A1516 !important 
+}
+ul.contact-info,
+.small-box .hover-text .ptitle,
+#about #about-slider .carousel-caption hr,
+.blog-box .hover-text a.btn.read-more-btn, 
+a.btn.btn1,
+ul.qcontrols li.active,
+input.form-control,
+input.form-control:focus,
+.alert-danger,
+.alert-success {
+	border-color: #6A1516 !important;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary.focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open > .dropdown-toggle.btn-primary {
+	background-color: #6A1516;
+	border-color: #6A1516 !important;
+}
+
+/* Album Portfolio Image Hover with Transparency
+******************************/
+.gallery .small-box .hover-text{
+	background: rgba(106, 21, 22, 0.40)
+}
+
+@media only screen and (max-width:768px) { 
+    .text-overlay { background: rgba(106, 21, 22, 0.70); }
+}

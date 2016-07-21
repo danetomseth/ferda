@@ -1,0 +1,6 @@
+<md-content class="md-padding">
+    <md-nav-bar md-selected-nav-item="active" nav-bar-aria-label="navigation links">
+      <md-nav-item ng-repeat="item in items" md-nav-sref="{{item.state}}" name="{{item.label}}">{{item.label}}</md-nav-item>
+    </md-nav-bar>
+    <span>{{currentNavItem}}</span>
+  </md-content>

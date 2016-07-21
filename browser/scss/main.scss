@@ -1,0 +1,51 @@
+
+$colorW: white;
+$colorA: #d1C5B7; //background, light brown
+$colorB: #856941; //Border/text med-brown
+$colorC: #735D41; //text, heading, dark brown
+$colorD: #0193B7; //light blue, highlights
+$colorE: #063E53; //dark blue, nav/gradients
+
+* {
+  box-sizing: border-box;
+}
+@import 'sailor/main';
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+#main {
+	// padding-top: 150px;
+	// background: url(/files/images/paper_3.png);
+	// background-size: repeat;
+	height: 100%;
+}
+
+.modal-dialog {
+	margin-top: 170px;
+}
+
+
+
+@import 'directives/main';
+@import 'home/main';
+@import 'about/main';
+@import 'tutorial/main';
+@import 'login/main';
+@import 'pictures/main';
+@import 'utah/main';
+@import 'chat/main';
+@import 'calendar/main';
+@import 'chatDev/main';
+@import 'album/main';
+@import 'photos/main';
+
+@import 'sailor/animate';
+@import 'sailor/jasny';
+@import 'sailor/nivo';
+@import 'sailor/brown';
+@import 'custom/main';

@@ -1,0 +1,333 @@
+/*===========================================*/
+/* This is the Responsive CSS for Sailor Theme
+/* Theme Author: Jenn and Lian and Tanh
+/* Theme URL: ThemeForces
+/* Created : November 20, 2014
+/* Latest Update : November 20, 2014
+/*===========================================*/
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width:768px) and (max-width:1024px) { 
+    h1 { font-size: 200px }
+    .hover-text h2 { font-size: 20px }
+    .small-box .hover-text,
+    .large-box .hover-text { padding: 20px }
+    .text-overlay {
+        background: rgba(12, 16, 38, 0.72);
+        height: 450px;
+        text-align: center;
+        width: 100%;
+        float: none !important;
+    }
+    #blog-post .featured-content { height: 450px}
+    ul.user-action {
+        position: initial;
+        text-align: center;
+        padding-top: 40px;
+    }
+    div#main-text { margin-top: 450px }
+    .featured-content img.img-responsive {
+        width: 110%;
+        height: 500px;
+    }
+    .text-overlay p.lead, 
+    .text-overlay p.excerpt {
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: #ffffff;
+        font-weight: 300;
+    }
+}
+/* Google Nexus 7 (portrait and landscape) ----------- */
+@media only screen and (min-width:500px) and (max-width:966px) { 
+    h1 { font-size: 140px }
+    #hero .carousel-caption {
+        right: 10%;
+        left: 10%;
+    }
+    #blog .blog-box {
+        height: 340px;
+        overflow: hidden;
+    }
+    section#portfolio {margin-top: 1px;}
+    .text-overlay h2{ margin-top: 55px }
+    .text-overlay {
+        background: rgba(12, 16, 38, 0.72);
+        height: 550px;
+        text-align: center;
+        width: 100%;
+        float: none !important;
+    }
+    #blog-post .featured-content { height: 500px}
+    ul.user-action {
+        position: initial;
+        text-align: center;
+        padding-top: 40px;
+        margin: 0 auto;
+    }
+    div#main-text { margin-top: 500px }
+    .featured-content img.img-responsive {
+        width: -webkit-calc(100% + 180px);
+        width: calc(100% + 180px);
+        max-width: 200%;
+        height: 550px;
+    }
+    .text-overlay p.lead, 
+    .text-overlay p.excerpt {
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: #ffffff;
+        font-weight: 300;
+    }
+}
+/* Tablets (portrait) ----------- */
+@media only screen and (min-width:500px) and (max-width:966px) and (orientation:portrait) { 
+    h1 { font-size: 160px }
+    #portfolio .small-box { height: 320px }
+    #blog .blog-box { height: 340px }
+    #hero .carousel-caption { top: 7% }
+    #navigation { padding-top: 100px }
+    p.excerpt {
+        padding-top: 20px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .blog-button {
+        left: 38%;
+        top: 36%;
+    }
+    #portfolio .large-box {
+        height: 500px;
+    }
+    #portfolio .small-box {
+        height: 250px;
+    }
+    .large-box .hover-text a.btn.read-more-btn {
+        top: 400px;
+    }
+    .small-box img.img-responsive {
+        width: -webkit-calc(100% + 180px);
+        width: calc(100% + 180px);
+        max-width: 200%;
+        -webkit-transform: translateX(-100px) translateY(-20px);
+    }
+    .blog-box img.img-responsive {
+        width: -webkit-calc(100% + 170px);
+        width: calc(100% + 170px);
+        max-width: 150%;
+    }
+    .large-box img.img-responsive {
+        max-width: 200%;
+        transform: translateX(-150px) translateY(-90px);
+        -webkit-transform: translateX(-150px) translateY(-190px);
+    }
+    .blog-box .hover-text h2 {
+        padding-top: 60px;
+    }
+    .quote blockquote { font-size: 40px }
+}
+/* Tablets (portrait) ----------- */
+@media only screen and (max-width:603px) and (orientation:portrait) { 
+    h1 { font-size: 100px }
+    #portfolio .large-box,
+    #portfolio .small-box,
+    #blog .blog-box {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .blog-button {
+        width: 150px;
+        height: 150px;
+        padding: 5px;
+        top: 44%;
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width:320px) and (max-width:480px) { 
+    h1 { font-size: 80px }
+    h2 { font-size: 20px }
+    h4 { font-size: 16px }
+    p.excerpt { padding-top: 12px }
+    #hero .carousel-inner > .item > img,
+    #hero .carousel-inner > .item > a > img {
+        height: 400px;
+        width: -webkit-calc(100% + 280px);
+        max-width: calc(100% + 280px);
+    }
+    #hero .carousel-caption {
+        right: 2%;
+        left: 2%;
+    }
+    #about #about-slider .carousel-caption { padding: 5% }
+    #navigation {
+        padding-top: 80px;
+        width: 240px;
+    }
+    #portfolio .large-box, 
+    #portfolio .small-box, 
+    #blog .blog-box {
+        width: 100%;
+    }
+    .hover-text h2 { font-size: 22px }
+    span.email,
+    span.phone,
+    span.address,
+    span.website {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+    span.event-name {
+        font-size: 16px;
+        font-weight: 800;
+    }
+    span.meta-place,
+    span.meta-date { font-size: 14px }
+    ul.contact-info { width: 90% }
+    #portfolio .large-box { height: 540px }
+    .large-box .hover-text a.btn.read-more-btn {top: 450px}
+    #blog .blog-box { height: 300px }
+    .blog-box .hover-text { padding: 5px;}
+    .blog-button {
+        padding: 10px;
+        width: 160px;
+        height: 160px;
+    }
+    .blog-button {
+        position: absolute;
+        left: 32.5%;
+        top: 43%;}
+    .quote blockquote { font-size: 30px }
+    #menu>img { width: 65px }
+    h5 {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    #contact p { font-size: 12px;
+        margin-top: 20px; }
+    #contact .contact-form { padding: 10px }
+    #contact .form-group {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .control-nav h5 {display: none;}
+    .control-nav{height:150px}
+    #objectives {padding: 20px 0;}
+    .page-title-bar {height: 65px}
+    section#portfolio.gallery, 
+    section#portfolio.albums {margin-top: 65px;}
+    .page-title-bar h2 {font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+    section#blog.posts {margin-top: 65px;}
+    .text-overlay {
+        background: rgba(12, 16, 38, 0.72);
+        height: 520px;
+        text-align: center;
+        width: 100%;
+        float: none !important;
+    }
+    #blog-post .featured-content { height: 520px}
+    ul.user-action {
+        position: initial;
+        text-align: center;
+        padding-top: 40px;
+    }
+    div#main-text { margin-top: 520px }
+    .featured-content img.img-responsive {
+        width: -webkit-calc(100% + 320px);
+        width: calc(100% + 320px);
+        max-width: 200%;
+        height: 570px;
+    }
+    .text-overlay p.lead, 
+    .text-overlay p.excerpt {
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: #ffffff;
+        font-weight: 300;
+    }
+}
+    
+
+/* Mobile/Smartphones (portrait) ----------- */
+@media only screen and (max-width:360px) and (orientation:portrait) { 
+    #hero .carousel-caption {top: 20%}
+    .space{padding 10px 0;}
+    #portfolio .small-box {height: 250px;}
+    p.excerpt {
+        padding-top: 12px;
+    }
+    .small-box .hover-text .ptitle{
+        .padding: 0px 5px
+    }
+    .small-box .hover-text,
+    .large-box .hover-text {
+         padding: 25px;
+    }
+    #blog .blog-box {
+         height: 250px;
+    }
+    .blog-box .hover-text h2 {
+         padding-top: 60px;
+    }
+    #portfolio .large-box,
+    .large-box .hover-text {height: 500px;}
+    .large-box .hover-text a.btn.read-more-btn {top: 400px;}
+    #about #about-slider .carousel-caption > ul.social-media li {padding: 10px;}
+    .fa-3x {font-size: 2em;}
+    .blog-button{display:none;}
+    .page-title-bar h2 {font-size: 14px;}
+    div#main-text { margin-top: 520px }
+    .featured-content img.img-responsive {
+        width: -webkit- calc(100% + 520px);
+        width: calc(100% + 520px);
+        max-width: 300%;
+        height: 570px;
+        transform: tra;
+        transform: translateX(-150px) translateY(-20px);
+        -webkit-transform: translateX(-150px) translateY(-10px);
+    }
+    .text-overlay h2{ font-size: 26px}
+    .text-overlay p.lead, 
+    .text-overlay p.excerpt {
+        line-height: 16px;
+        font-size: 11px;
+        letter-spacing: 1px;
+        color: #ffffff;
+        font-weight: 300;
+    }
+    ul.user-action li {padding-right: 10px;}
+    blockquote{ font-size: 14px}
+    p{ font-size: 12px}
+}
+
+/* iPhones (portrait) ----------- */
+@media only screen and (max-width:320px) and (orientation:portrait) { 
+    .small-box img.img-responsive {
+        width: -webkit-calc(100% + 180px);
+        width: calc(100% + 180px);
+        max-width: 200%;
+        -webkit-transform: translateX(-100px) translateY(-20px);
+    }
+    #portfolio .large-box, .large-box .hover-text {
+        height: 480px;
+    }
+    span.email, span.phone, span.address, span.website {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    .quote blockquote {font-size: 26px;}
+    .quote blockquote {padding: 5px;}
+    #objectives .quote{padding: 5px 10px}
+    .control-nav h5 {display: none;}
+    .control-nav{height:150px}
+    section#portfolio.gallery, 
+    section#portfolio.albums{margin-top: 65px;}
+    .large-box img.img-responsive {
+        width: -webkit-calc(100% + 220px);
+        width: calc(100% + 220px);
+        max-width: 200%;
+    }
+    #blog .blog-box {height: 240px;}
+}
