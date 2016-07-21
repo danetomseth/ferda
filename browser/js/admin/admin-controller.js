@@ -11,7 +11,6 @@ app.controller("AdminCtrl", ($scope, $state, AdminFactory, AlbumFactory, PhotosF
     PhotosFactory.fetchTen()
         .then(photos => {
             $scope.photos = photos;
-            console.log('photos', photos);
         });
 
     $scope.deleteAlbum = (album) => {
@@ -36,12 +35,10 @@ app.controller("AdminCtrl", ($scope, $state, AdminFactory, AlbumFactory, PhotosF
         PhotosFactory.fetchAll()
             .then(photos => {
                 $scope.photos = photos;
-                console.log('photos', photos);
             });
     }
 
     $scope.viewAlbum = (album) => {
-    	console.log('going to ', album._id);
     	$state.go('singleAlbum', {albumId: album._id})
     }
 
@@ -58,6 +55,5 @@ app.controller("AdminCtrl", ($scope, $state, AdminFactory, AlbumFactory, PhotosF
 
     $scope.addToAlbum = (photo) => {
         $scope.currentAlbum.photos.push(photo._id);
-        console.log('photo added');
     }
 })

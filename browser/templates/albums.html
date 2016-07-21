@@ -1,0 +1,11 @@
+<h2>Albums</h2>
+<div id="imageThumbs">
+	
+	<div id="imageBox" class="md-whiteframe-3dp" ng-repeat="album in albums">
+		<p>{{album.title}}
+		<div class="image-wrapper">
+			<img ng-src="{{album.cover.src}}"  alt="">
+		</div>
+	</div>
+
+</div>

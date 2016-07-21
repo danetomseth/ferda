@@ -14,7 +14,7 @@ var Album = mongoose.model('Album');
 
 router.get('/', (req, res, next) => {
     Album.find({})
-    .populate('photos')
+    .populate('photos cover')
         .then(album => {
             res.send(album);
         })
@@ -22,7 +22,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/:albumId', (req, res, next) => {
     Album.findById(req.params.albumId)
-      .populate('photos')
+      .populate('photos cover')
 
     .then(album => {
         console.log('single album', album);
@@ -73,6 +73,7 @@ router.post('/update', (req, res, next) => {
         res.sendStatus(200);
     });
 });
+
 
 
 

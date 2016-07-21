@@ -3,7 +3,6 @@ app.controller('AlbumCtrl', ($scope, $timeout, $state, AdminFactory, AlbumFactor
 
     AlbumFactory.fetchAll()
         .then(albums => {
-            console.log('fetched', albums);
             $scope.albums = albums;
             $scope.albumOne = $scope.albums[0];
         });
@@ -11,7 +10,6 @@ app.controller('AlbumCtrl', ($scope, $timeout, $state, AdminFactory, AlbumFactor
     PhotosFactory.fetchTen()
         .then(photos => {
             $scope.photos = photos;
-            console.log('photos', photos);
         });
 
     $scope.deleteAlbum = (album) => {
@@ -36,7 +34,6 @@ app.controller('AlbumCtrl', ($scope, $timeout, $state, AdminFactory, AlbumFactor
         PhotosFactory.fetchAll()
             .then(photos => {
                 $scope.photos = photos;
-                console.log('photos', photos);
             });
     }
 
@@ -55,7 +52,6 @@ app.controller('AlbumCtrl', ($scope, $timeout, $state, AdminFactory, AlbumFactor
     }
 
     $scope.viewAlbum = (album) => {
-        console.log('going to ', album._id);
         $state.go('singleAlbum', {albumId: album._id})
     }
 

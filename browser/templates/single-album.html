@@ -2,12 +2,15 @@
 
 <md-button class="md-primary md-raised" ng-click="updateAlbum()">Save Changes</md-button>
 
+<md-button class="md-primary md-raised" ng-click="selectCover()">Select Cover</md-button>
+
 <div id="imageThumbs">
 
 	<div id="imageBox" class="md-whiteframe-3dp" ng-repeat="photo in album.photos">
 		<div class="image-wrapper">
 			<img ng-src="{{photo.src}}"  alt="">
-			<span class="glyphicon glyphicon-remove-sign" ng-click="removeFromAlbum(photo)"></span>
+			<span ng-hide="selectingCover" class="glyphicon glyphicon-remove-sign" ng-click="removeFromAlbum(photo)"></span>
+			<span ng-show="selectingCover" class="glyphicon glyphicon-plus" ng-click="addCover(photo)"></span>
 		</div>
 	</div>
 

@@ -11,6 +11,10 @@ var schema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Photo'
     }],
+    cover: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Photo'
+    },
     date: {
     	type: Date, 
     	default: Date.now
