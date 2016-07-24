@@ -9,11 +9,17 @@ var schema = new mongoose.Schema({
     email: {
         type: String
     },
+    first: {
+        type: String,
+        required: true
+    },
+    last: {
+        type: String,
+        required: true
+
+    },
     username: {
         type: String
-    },
-    chatArray: {
-        type: Array
     },
     password: {
         type: String
@@ -32,7 +38,23 @@ var schema = new mongoose.Schema({
     },
     google: {
         id: String
-    }
+    },
+    photos: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Photo'
+    }],
+    favorites: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Photo'
+    }],
+    albums: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Album'
+    }],
+    groups: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Group'
+    }],
 });
 
 // method to remove sensitive information from user objects before sending them out

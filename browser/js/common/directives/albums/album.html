@@ -1,0 +1,9 @@
+<h2>Message: {{message}}</h2>
+
+<div id="simpleAlbums">
+	<div id="simpleAlbum" ng-repeat="album in albums">
+		<p>{{album.title}}</p>
+		<img ng-click="followAlbum(album)" ng-src="{{album.cover.src}}"/>
+	</div>
+
+</div>

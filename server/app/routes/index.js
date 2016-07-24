@@ -7,7 +7,7 @@ router.use('/members', require('./members'));
 
 
 router.use('/chats', require('./chats'));
-
+router.use('/users', require('./users'));
 router.use('/photos', require('./photos'));
 router.use('/albums', require('./albums'));
 

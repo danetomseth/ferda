@@ -1,0 +1,83 @@
+
+<div id="banner">
+	<md-toolbar layout="row" class="md-primary">
+		<div class="md-toolbar-tools">
+			<span>My Profile</span>
+		</div>
+	</md-toolbar>
+	<md-content>
+		<md-list flex>
+			<md-subheader class="md-no-sticky">Sub-Header</md-subheader>
+			<md-list-item class="md-3-line">
+				<img ng-src="/image/IMG_1.jpg" class="md-avatar" alt="user.name" />
+				<div class="md-list-item-text" layout="column">
+					<h3>Welcome, {{user.first}} {{user.last}}</h3>
+				</div>
+			</md-list-item>
+		</md-list>
+
+	</md-content>
+	<md-content>
+		<md-tabs md-border-bottom md-dynamic-height>
+			<md-tab label="Photos">
+				<md-content class="md-padding">
+					<div ng-hide="user.photos.length" class="text-center">
+						<h2>No Photos Yet!!</h2>
+						<md-button class="md-primary">Add photos</md-button>
+					</div>
+					<div id="userPhotos" ng-if="user.photos.length">
+						photos
+						
+						<div ng-repeat="photo in user.photos">
+							<img ng-src="photo.src" alt="">
+						</div>
+					</div>
+				</md-content>
+			</md-tab>
+			<md-tab label="Albums">
+				<md-content class="md-padding">
+					<div ng-hide="user.albums.length" class="text-center">
+						<h2>No Albums Yet!!</h2>
+						<md-button class="md-primary" ng-click="addAlbums()">Add Albums</md-button>
+					</div>
+					<div id="simpleAlbums" ng-if="user.albums.length">
+						<div ng-click="viewAlbum(album)" id="simpleAlbum" ng-repeat="album in user.albums">
+							<p>{{album.title}}</p>
+							<img ng-src="{{album.cover.src}}"/>
+						</div>
+					</div>
+					<md-button class="md-primary" ng-click="addAlbums()">Add More</md-button>
+					<select-album ng-if="showAlbums"></select-album>
+				</md-content>
+			</md-tab>
+			<md-tab label="Favorites">
+				<md-content class="md-padding">
+					<div ng-hide="user.favorites.length" class="text-center">
+						<h2>No Favorites Yet!!</h2>
+						<md-button class="md-primary">Add Favorites</md-button>
+					</div>
+					<div id="userfavorites" ng-if="user.favorites.length">
+						<div ng-repeat="photo in user.favorites">
+						</div>
+					</div>
+				</md-content>
+			</md-tab>
+			<md-tab label="Groups">
+				<md-content class="md-padding">
+					<div ng-hide="user.groups.length" class="text-center">
+						<h2>No Friends Yet :(</h2>
+						<md-button class="md-primary">Follow Some?</md-button>
+					</div>
+					<div id="userGroups" ng-if="user.groups.length">
+						<div ng-repeat="photo in user.groups">
+						</div>
+					</div>
+				</md-content>
+			</md-tab>
+		</md-tabs>
+	</md-content>
+
+</div>
+
+
+

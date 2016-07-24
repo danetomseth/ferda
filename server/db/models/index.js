@@ -6,3 +6,4 @@ require('./chats');
 require('./onlineUsers');
 require('./photo');
 require('./albums');
+require('./groups');

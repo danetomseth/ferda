@@ -1,64 +1,27 @@
-<!-- <nav id="navigation" class="navbar navbar-static-top">
-    <div class="container">
-        <div class="navbar-header">
-            <img src="files/images/favicon.ico" alt="dirtybird">
-        </div>
-        <ul class="nav navbar-nav">
-            
-        </ul>
-        <button ng-show="!user" ui-sref="login" class="btn login-button">Login</button>
-        <div ng-show="user" class="welcome">
-            <span>Welcome, {{ user.email }}!</span>
-            <a ng-click="logout()">Logout</a>
-        </div>
-    </div>
-</nav> -->
+<div id="header">
+
+<div id="navbar">
+    <ul class="nav-list">
+        <li class="nav-item" ng-class="{linkHover: item.hover, activeLink: (currentPage == item.state) }" ng-mouseenter="item.hover = true"
+    ng-mouseleave="item.hover = false" ng-repeat="item in items" ui-sref="{{item.state}}">{{item.label}}</li>
+    </ul>
+</div>
+<div id="login">
+    <p class="message">Welcome, </p>
+    <p class="name">Dane</p>
+    <md-button class="md-secondary">Logout</md-button>
+</div>
+
+</div>
 
 
+
+<!-- 
   <md-content class="md-padding">
     <md-nav-bar md-selected-nav-item="active" nav-bar-aria-label="navigation links">
       <md-nav-item md-nav-sref="{{item.state}}" name="{{item.label}}">{{item.label}}</md-nav-item>
-     
-      <!-- these require actual routing with ui-router or ng-route, so they won't work in the demo
-      <md-nav-item md-nav-sref="app.page4" name="page4">Page Four</md-nav-item>
-      <md-nav-item md-nav-href="#page5" name="page5">Page Five</md-nav-item>
-      -->
     </md-nav-bar>
     <span>{{currentNavItem}}</span>
   </md-content>
 
-<!-- <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <img src="files/images/favicon.ico" class="logo" alt="dirtybird">
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
-                    <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
-                </li>
-                
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <button ng-show="!user" ui-sref="login" class="btn login-button">Login</button>
-                <div ng-show="user" class="welcome">
-                    <span>Welcome, {{ user.email }}!</span>
-                    <a ng-click="logout()">Logout</a>
-                </div>
-            </ul>
-        </div>
-    </div>
-</nav> -->
-    <!-- <div id="navigation" class="navmenu navmenu-default navmenu-fixed-left offcanvas">
-        <a href="index.html"><img src="img/menu-logo.png" alt="..." class="logo"></a>
-        <ul class="nav navmenu-nav">
-            <li class="page-scroll" ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
-                <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
-            </li>
-        </ul>
-        <button ng-show="!user" ui-sref="login" class="btn login-button">Login</button>
-        <div ng-show="user" class="welcome">
-            <span>Welcome, {{ user.email }}!</span>
-            <a ng-click="logout()">Logout</a>
-        </div>
-    </div>  -->
+ -->

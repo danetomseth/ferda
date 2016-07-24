@@ -46,3 +46,23 @@
 .image-wrapper .glyphicon:hover {
   color: red;
 }
+
+#simpleAlbums {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 20px 10px;
+}
+#simpleAlbum {
+  height: 200px;
+  width: 300px;
+  margin: 5px;
+}
+
+#simpleAlbum img {
+  width: 100%;
+  }
+
+#simpleAlbum img:hover {
+  opacity: 0.8;
+  }

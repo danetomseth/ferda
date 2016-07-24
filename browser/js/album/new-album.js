@@ -6,7 +6,7 @@ app.config(($stateProvider) => {
 	})
 });
 
-app.controller('NewAlbumCtrl', ($state, AlbumFactory, PhotosFactory, DialogFactory) => {
+app.controller('NewAlbumCtrl', ($scope, $state, AlbumFactory, PhotosFactory, DialogFactory) => {
 	$scope.createAlbum = () => {
         let album = {
             title: $scope.newAlbum
