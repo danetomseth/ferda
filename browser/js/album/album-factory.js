@@ -23,6 +23,11 @@ app.factory('AlbumFactory', function($http) {
                 return res.data
             });
         },
+        findUserAlbums: (userId) => {
+            return $http.get('/api/albums/user/' + userId).then(res => {
+                return res.data;
+            })
+        },
         addPhoto: (photoId) => {
             return $http.post('/api/albums/photo/' + photoId)
             .then(res => {

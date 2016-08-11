@@ -8,8 +8,8 @@ $colorE: #063E53; //dark blue, nav/gradients
 
 * {
   box-sizing: border-box;
+  font-family: "filson-soft",sans-serif;
 }
-@import 'sailor/main';
 
 @mixin clearfix {
   &:after {
@@ -18,10 +18,8 @@ $colorE: #063E53; //dark blue, nav/gradients
     clear: both;
   }
 }
+
 #main {
-	// padding-top: 150px;
-	// background: url(/files/images/paper_3.png);
-	// background-size: repeat;
 	height: 100%;
 }
 
@@ -33,19 +31,22 @@ $colorE: #063E53; //dark blue, nav/gradients
 
 @import 'directives/main';
 @import 'home/main';
-@import 'about/main';
-@import 'tutorial/main';
 @import 'login/main';
-@import 'pictures/main';
-@import 'utah/main';
 @import 'chat/main';
 @import 'calendar/main';
-@import 'chatDev/main';
 @import 'album/main';
 @import 'photos/main';
-
-@import 'sailor/animate';
-@import 'sailor/jasny';
-@import 'sailor/nivo';
-@import 'sailor/brown';
 @import 'custom/main';
+@import 'deck/main';
+
+
+// Fonts
+
+
+h1, h2, h3, h4{
+  font-family: "filson-soft",sans-serif;
+  }
+
+md-button {
+	font-family: "filson-soft",sans-serif !important;
+}

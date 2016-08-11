@@ -10,14 +10,15 @@ var schema = new mongoose.Schema({
     src: {
         type: String
     },
-    thumb: {
+    thumbSrc: {
         type: String
     },
     author: {
         type: String
     },
     album: {
-        type: String
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Album'
     },
     tags: {
         type: Array,

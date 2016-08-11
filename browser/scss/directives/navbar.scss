@@ -1,62 +1,68 @@
-navbar {
+#header {
+  padding: 10px 0;
+  padding-left: 50px;
+  height: 60px;
+  background: black;
+}
 
-  // display: block;
-  // background: $colorE;
-  // border-bottom: 1px solid $colorD;
-  // box-shadow: 1px 1px 14px -3px $colorA;
+#login {
+  width: 25%;
+  float: right;
+  color: white;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 20px;
+}
 
-  .container {
-    width: 91%;
-    max-width: 1340px;
-     padding-top: 20px;
+#login .message {
+  font-style: italic;
+  display: inline;
+}
+
+#login .name {
+  display: inline;
+}
+
+#login .button {
+
+}
+
+#navbar {
+  width: 50%;
+  float: left;
+}
+
+
+#navbar ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+
+#navbar li {
+  display: block;
+  float: left;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 20px;
+  margin: 0 10px;
+  background: green;
+  color: white;
+
+}
+
+#navbar li:hover {
+  
   }
 
-  fullstack-logo {
-    margin-top: 5px;
-    margin-right: 20px;
-    width: 40px;
-  }
+.linkHover {
+  opacity: 0.8;
+  cursor: pointer;
+}
 
-  a {
-    // color: $colorD;
-    font-size: 16px;
-  }
-
-  // .nav > li > a {
-  //   cursor: pointer;
-  //   transition: color 0.2s;
-  //   &.active {
-  //     color: darken(white, 10%);
-  //   }
-  //   &:hover {
-  //     background: none;
-  //     color: white;
-  //   }
-  //   &:focus {
-  //     background: none;
-  //   }
-  // }
-
-  .login-button {
-    float: right;
-    border: 1px solid $colorW;
-    margin-top: 10px;
-    background: none;
-    outline: none !important;
-  }
-
-  .welcome {
-    float: right;
-    margin-top: 12px;
-    span {
-      color: $colorW;
-      font-size: 16px;
-      margin-right: 5px;
-    }
-    a {
-      color: $colorA;
-      cursor: pointer;
-    }
-  }
-
+.activeLink {
+  background-color: white !important;  
+  color: black !important;
+  border-bottom: 1px solid black;
 }

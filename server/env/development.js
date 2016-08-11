@@ -1,6 +1,6 @@
 module.exports = {
   "DATABASE_URI": "mongodb://localhost:27017/ZTF",
-  "AKID": 'AKIAIICZTHCKDXOPGDVA',
+  "AKID": 'AKIAIAW5J6QUWAEGFJQQ',
   "SECRET": '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',
   "SESSION_SECRET": "Optimus Prime is my real dad",
   "TWITTER": {

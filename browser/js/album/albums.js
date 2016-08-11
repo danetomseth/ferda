@@ -1,7 +1,10 @@
 app.config(function ($stateProvider) {
     $stateProvider.state('albums', {
         url: '/albums',
-        templateUrl: '/albums.html',
-        controller: 'AlbumsCtrl'
+        templateUrl: 'js/album/albums.html',
+        controller: 'AlbumsCtrl',
+        data: {
+            authenticate: true
+        }
     });
 });

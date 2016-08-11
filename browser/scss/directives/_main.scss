@@ -1,3 +1,15 @@
-@import "fullstack-logo";
+// Set as block elements
+
+select-pictures {
+	display: block;
+}
+
+
+photo-grid {
+	display: block;
+}
+
+
+
 @import "navbar";
-@import "home-head";
+@import "banner";

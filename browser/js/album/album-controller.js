@@ -23,8 +23,7 @@ app.controller('AlbumCtrl', ($scope, $timeout, $state, AdminFactory, AlbumFactor
             title: $scope.newAlbum
         }
         AlbumFactory.createAlbum(album).then(album => {
-            $scope.albums.push(album);
-            $scope.newAlbum = "";
+            DialogFactory.display("Created");
         })
     }
 
