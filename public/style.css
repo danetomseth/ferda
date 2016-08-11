@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "filson-soft",sans-serif; }
 
 #main {
   height: 100%; }
@@ -7,10 +8,15 @@
 .modal-dialog {
   margin-top: 170px; }
 
+select-pictures {
+  display: block; }
+
+photo-grid {
+  display: block; }
+
 #header {
   padding: 10px 0;
   padding-left: 50px;
-  margin-bottom: 30px;
   height: 60px;
   background: black; }
 
@@ -343,3 +349,106 @@
 #signupPage {
   width: 75%;
   margin: 20px auto; }
+
+md-icon svg {
+  fill: inherit; }
+
+.md-calendar-date {
+  color: black; }
+
+.md-calendar {
+  color: black; }
+
+.md-datepicker {
+  color: black !important; }
+
+.md-calendar-day-header th {
+  color: black; }
+
+.input-form {
+  background: #F1F1F1;
+  margin: 20px; }
+
+.md-white {
+  color: white !important; }
+
+.md-warn {
+  color: white !important; }
+
+.md-nav-bar {
+  border-style: none !important; }
+
+.left-align {
+  float: left; }
+
+#cardImg img {
+  width: 100%; }
+
+.title-sm {
+  padding-top: 16px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px; }
+
+md-card md-card-content {
+  padding: 8px; }
+
+#centerContent {
+  width: 75%;
+  margin: 0 auto; }
+
+.input-block {
+  margin-left: 36px;
+  position: absolute;
+  top: 8px;
+  line-height: 2em; }
+
+.inline-label {
+  padding-right: 10px; }
+
+.deckgrid[deckgrid]::before {
+  /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+  content: '4 .column.column-1-4';
+  font-size: 0;
+  /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+  visibility: hidden; }
+
+.deckgrid .column {
+  float: left; }
+
+.deckgrid .column-1-4 {
+  width: 25%; }
+
+.deckgrid .column-1-1 {
+  width: 100%; }
+
+.deckgrid img {
+  width: 100%; }
+
+.a-card {
+  overflow: hidden;
+  position: relative; }
+
+.a-card .glyphicon {
+  position: absolute;
+  color: white;
+  font-size: 1.5em;
+  top: 10px;
+  left: 10px; }
+
+.a-card .glyphicon:hover {
+  color: blue; }
+
+.card-media:hover {
+  opacity: 0.6;
+  cursor: pointer; }
+
+@media screen and (max-width: 480px) {
+  .deckgrid[deckgrid]::before {
+    content: '1 .column.column-1-1'; } }
+
+h1, h2, h3, h4 {
+  font-family: "filson-soft",sans-serif; }
+
+md-button {
+  font-family: "filson-soft",sans-serif !important; }

@@ -1,6 +1,7 @@
 'use strict';
 var crypto = require('crypto');
 var mongoose = require('mongoose');
+var deepPopulate = require('mongoose-deep-populate')(mongoose);
 var _ = require('lodash');
 
 //added username to User schema
@@ -56,6 +57,8 @@ var schema = new mongoose.Schema({
         ref: 'Group'
     }],
 });
+
+schema.plugin(deepPopulate);
 
 // method to remove sensitive information from user objects before sending them out
 schema.methods.sanitize = function () {

@@ -1,27 +1,11 @@
-<div id="header">
-
-<div id="navbar">
-    <ul class="nav-list">
-        <li class="nav-item" ng-class="{linkHover: item.hover, activeLink: (currentPage == item.state) }" ng-mouseenter="item.hover = true"
-    ng-mouseleave="item.hover = false" ng-repeat="item in items" ui-sref="{{item.state}}">{{item.label}}</li>
-    </ul>
-</div>
-<div id="login">
-    <p class="message">Welcome, </p>
-    <p class="name">Dane</p>
-    <md-button class="md-secondary">Logout</md-button>
-</div>
-
-</div>
 
 
-
-<!-- 
-  <md-content class="md-padding">
-    <md-nav-bar md-selected-nav-item="active" nav-bar-aria-label="navigation links">
-      <md-nav-item md-nav-sref="{{item.state}}" name="{{item.label}}">{{item.label}}</md-nav-item>
+<md-content class="md-padding">
+    <md-nav-bar md-selected-nav-item="currentPage" nav-bar-aria-label="navigation links">
+      <md-nav-item ng-repeat="item in items" md-nav-sref="{{item.state}}" name="{{item.state}}">{{item.label}}</md-nav-item>
     </md-nav-bar>
     <span>{{currentNavItem}}</span>
-  </md-content>
+</md-content>
 
- -->
+
+

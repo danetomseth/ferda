@@ -30,6 +30,18 @@ router.get('/:albumId', (req, res, next) => {
     });
 });
 
+router.get('/user/:userId', (req, res, next) => {
+    Album.find({
+        owner: req.params.userId
+    })
+      .populate('photos cover')
+
+    .then(album => {
+        console.log('user album', album);
+        res.send(album);
+    });
+});
+
 
 
 router.post('/', (req, res, next) => {

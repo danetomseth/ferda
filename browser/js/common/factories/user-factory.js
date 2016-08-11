@@ -52,6 +52,22 @@ app.factory('UserFactory', ($http, $rootScope, DialogFactory) => {
 					DialogFactory.display('Status not 200', 1000)
 				}
 			})
+		},
+		followPhoto: (photo) => {
+			let user = $rootScope.user
+			if(user.photos.indexOf() !== -1) {
+				console.log('Photo already exists');
+			}
+			user.photos.push(photo);
+
+			$http.post('/api/users/update', user).then(res => {
+				if(res.status === 200) {
+					DialogFactory.display('Added To Photos', 1000)
+				}
+				else {
+					DialogFactory.display('Status not 200', 1000)
+				}
+			})
 		}
 	}
 });

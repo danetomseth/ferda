@@ -3,6 +3,7 @@ var router = require('express').Router();
 var path = require('path');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var deepPopulate = require('mongoose-deep-populate')(mongoose);
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({
     extended: true
@@ -62,7 +63,7 @@ router.get('/:username', (req, res, next) => {
 	User.findOne({
 		username: req.params.username
 	})
-	.populate('photos albums favorites groups')
+	.deepPopulate('photos albums albums.cover favorites groups')
 	.then((user, err) => {
 		if(err) {
 			console.log('err', err);

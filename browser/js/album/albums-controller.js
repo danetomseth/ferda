@@ -1,7 +1,6 @@
-app.controller('AlbumsCtrl', ($scope, $state, PhotosFactory, AlbumFactory, UserFactory) => {
+app.controller('AlbumsCtrl', ($scope, $state, PhotosFactory, AlbumFactory, UserFactory, DialogFactory) => {
 	AlbumFactory.fetchAll()
         .then(albums => {
-        	console.log('fetching albums');
             $scope.albums = albums;
             $scope.albumOne = $scope.albums[0];
         });
@@ -11,8 +10,17 @@ app.controller('AlbumsCtrl', ($scope, $state, PhotosFactory, AlbumFactory, UserF
     }
 
     $scope.followAlbum = (album) => {
-    	console.log('following', album);
     	UserFactory.followAlbum(album)
+    }
+
+    $scope.createAlbum = () => {
+        $state.go('newAlbum');
+        // let album = {
+        //     title: $scope.newAlbum
+        // }
+        // AlbumFactory.createAlbum(album).then(album => {
+        //     DialogFactory.display("Created");
+        // })
     }
 
 });

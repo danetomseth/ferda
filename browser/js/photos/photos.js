@@ -1,16 +1,22 @@
 app.config(function ($stateProvider) {
     $stateProvider.state('photos', {
         url: '/photos',
-        templateUrl: '/photos.html',
-        controller: 'PhotoCtrl'
+        templateUrl: 'js/photos/photos.html',
+        controller: 'PhotoCtrl',
+        data: {
+            authenticate: true
+        }
     });
 });
 
 app.config(function ($stateProvider) {
     $stateProvider.state('addphoto', {
         url: '/photos',
-        templateUrl: '/photos-add.html',
-        controller: 'PhotoCtrl'
+        templateUrl: 'js/photos/photos-add.html',
+        controller: 'PhotoCtrl',
+        data: {
+            authenticate: true
+        }
     });
 });
 
@@ -18,8 +24,11 @@ app.config(function ($stateProvider) {
 app.config(function ($stateProvider) {
     $stateProvider.state('uploadPhotos', {
         url: '/upload',
-        templateUrl: '/photos-upload.html',
-        controller: 'UploadPhotoCtrl'
+        templateUrl: 'js/photos/photos-upload.html',
+        controller: 'UploadPhotoCtrl',
+        data: {
+            authenticate: true
+        }
     });
 });
 

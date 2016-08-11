@@ -1,7 +1,10 @@
 app.config(function ($stateProvider) {
     $stateProvider.state('admin', {
         url: '/admin',
-        templateUrl: 'templates/admin.html',
-        controller: 'AlbumCtrl'
+        templateUrl: 'js/admin/admin.html',
+        controller: 'AlbumCtrl',
+        data: {
+            authenticate: true
+        }
     });
 });

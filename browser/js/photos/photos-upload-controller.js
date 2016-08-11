@@ -1,6 +1,21 @@
 app.controller('UploadPhotoCtrl', ($scope, $state, PhotosFactory, AlbumFactory, FileUploader) => {
-	var uploader = $scope.uploader = new FileUploader({
-             url: '/api/upload/upload'
+	AlbumFactory.fetchAll().then(albums => {
+        $scope.albums = albums;
+    })
+
+    $scope.createAlbum = () => {
+        let album = {
+            title: $scope.newAlbum
+        }
+        AlbumFactory.createAlbum(album).then(album => {
+            $scope.albums.push(album);
+            $scope.photoAlbum = album._id;
+        })
+    }
+
+
+    var uploader = $scope.uploader = new FileUploader({
+             url: '/api/photos/uploadAWS'
         });
         uploader.filters.push({
             name: 'imageFilter',
@@ -9,11 +24,19 @@ app.controller('UploadPhotoCtrl', ($scope, $state, PhotosFactory, AlbumFactory, 
                 return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1;
             }
         });
+        let count = 1;
         uploader.onWhenAddingFileFailed = function(item /*{File|FileLikeObject}*/ , filter, options) {
             console.info('onWhenAddingFileFailed', item, filter, options);
         };
         uploader.onAfterAddingFile = function(fileItem) {
-            console.info('onAfterAddingFile', fileItem);
+            // console.info('onAfterAddingFile', fileItem);
+            let photoInfo = {
+                title: $scope.title + '-' + count,
+                album: $scope.photoAlbum
+            }
+            fileItem.formData.push(photoInfo);
+            count++;
+            console.log('file', fileItem);
         };
         uploader.onAfterAddingAll = function(addedFileItems) {
             console.info('onAfterAddingAll', addedFileItems);
@@ -41,6 +64,6 @@ app.controller('UploadPhotoCtrl', ($scope, $state, PhotosFactory, AlbumFactory, 
         };
         uploader.onCompleteAll = function() {
             console.info('onCompleteAll');
-            $scope.finish();
+            // $scope.finish();
         };
 });

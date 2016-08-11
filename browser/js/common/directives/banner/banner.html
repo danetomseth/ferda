@@ -1,52 +1,57 @@
-
 <div id="banner">
-	<md-toolbar layout="row" class="md-primary">
+	<md-toolbar>
 		<div class="md-toolbar-tools">
-			<span>My Profile</span>
+			<h2>
+				<span>Welcome, {{user.first}} {{user.last}}</span>
+			</h2>
+			<span flex></span>
+			<md-button class="md-icon-button" aria-label="User">
+				<md-tooltip>Account</md-tooltip>
+				<md-icon class="material-icons md-white">account_box</md-icon>
+			</md-button>
+			<md-button class="md-icon-button" aria-label="Upload" ui-sref="uploadPhotos">
+				<md-tooltip>Upload</md-tooltip>
+				<md-icon class="material-icons md-white">backup</md-icon>
+			</md-button>
 		</div>
 	</md-toolbar>
-	<md-content>
-		<md-list flex>
-			<md-subheader class="md-no-sticky">Sub-Header</md-subheader>
-			<md-list-item class="md-3-line">
-				<img ng-src="/image/IMG_1.jpg" class="md-avatar" alt="user.name" />
-				<div class="md-list-item-text" layout="column">
-					<h3>Welcome, {{user.first}} {{user.last}}</h3>
-				</div>
-			</md-list-item>
-		</md-list>
-
-	</md-content>
 	<md-content>
 		<md-tabs md-border-bottom md-dynamic-height>
 			<md-tab label="Photos">
 				<md-content class="md-padding">
 					<div ng-hide="user.photos.length" class="text-center">
 						<h2>No Photos Yet!!</h2>
-						<md-button class="md-primary">Add photos</md-button>
+						<md-button class="md-primary" ng-click="addPictures()">Add photos</md-button>
 					</div>
-					<div id="userPhotos" ng-if="user.photos.length">
-						photos
-						
-						<div ng-repeat="photo in user.photos">
-							<img ng-src="photo.src" alt="">
-						</div>
+					<photo-grid photos="user.photos" ng-if="user.photos.length"></photo-grid>
+
+					<select-pictures class="clearfix" ng-if="showPictures"></select-pictures>
+					<div class="clearfix"></div>
+					<div ng-cloak class="text-center clearfix">
+						<md-button ng-if="user.photos.length" class="md-primary " ng-click="addPictures()">Add More</md-button>
 					</div>
 				</md-content>
 			</md-tab>
 			<md-tab label="Albums">
 				<md-content class="md-padding">
-					<div ng-hide="user.albums.length" class="text-center">
+					<div ng-hide="userAlbums.length" class="text-center">
 						<h2>No Albums Yet!!</h2>
 						<md-button class="md-primary" ng-click="addAlbums()">Add Albums</md-button>
 					</div>
-					<div id="simpleAlbums" ng-if="user.albums.length">
+					<!-- <div id="simpleAlbums" ng-if="user.albums.length">
 						<div ng-click="viewAlbum(album)" id="simpleAlbum" ng-repeat="album in user.albums">
 							<p>{{album.title}}</p>
 							<img ng-src="{{album.cover.src}}"/>
 						</div>
+					</div> -->
+					<div layout="row" layout-wrap ng-cloak ng-if="userAlbums.length">
+						<!-- <user-albums flex=25 ng-repeat="album in user.albums"></user-albums> -->
+						<user-albums flex=25 ng-repeat="album in userAlbums"></user-albums>
 					</div>
-					<md-button class="md-primary" ng-click="addAlbums()">Add More</md-button>
+
+					<div class="text-center">
+						<md-button ng-if="userAlbums.length" class="md-primary" ng-click="addAlbums()">Add More</md-button>
+					</div>
 					<select-album ng-if="showAlbums"></select-album>
 				</md-content>
 			</md-tab>

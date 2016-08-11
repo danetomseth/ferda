@@ -9,7 +9,6 @@ app.directive('navbar', function($rootScope, AuthService, AUTH_EVENTS, $state) {
             $rootScope.$on('$stateChangeSuccess',
                 function(event, toState, toParams, fromState, fromParams) {
                     scope.currentPage = toState.name;
-                    console.log(toState.name);
                 }
             )
 
@@ -22,7 +21,12 @@ app.directive('navbar', function($rootScope, AuthService, AUTH_EVENTS, $state) {
             }, {
                 label: 'Albums',
                 state: 'albums'
-            }, {
+            }, 
+            {
+                label: 'Schedule',
+                state: 'calendar'
+            },
+            {
                 label: 'Admin',
                 state: 'admin'
             }];

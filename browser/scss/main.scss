@@ -8,6 +8,7 @@ $colorE: #063E53; //dark blue, nav/gradients
 
 * {
   box-sizing: border-box;
+  font-family: "filson-soft",sans-serif;
 }
 
 @mixin clearfix {
@@ -36,3 +37,16 @@ $colorE: #063E53; //dark blue, nav/gradients
 @import 'album/main';
 @import 'photos/main';
 @import 'custom/main';
+@import 'deck/main';
+
+
+// Fonts
+
+
+h1, h2, h3, h4{
+  font-family: "filson-soft",sans-serif;
+  }
+
+md-button {
+	font-family: "filson-soft",sans-serif !important;
+}

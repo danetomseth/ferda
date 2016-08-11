@@ -1,0 +1,24 @@
+<md-toolbar>
+		<div class="md-toolbar-tools">
+			<h2>
+				<span>{{album.title}}</span>
+			</h2>
+		</div>
+	</md-toolbar>
+<div layout="row" layout-align="center" class="text-center">
+<md-button ng-show="changesMade" class="md-warn md-raised" ng-click="updateAlbum()">Save Changes</md-button>
+
+<md-button ng-hide="changesMade" class="md-accent md-raised" ng-click="selectCover()">Select Cover</md-button>
+<md-button ng-hide="changesMade" class="md-accent md-raised" ng-click="deletePhotos()">Delete Photos</md-button>
+</div>
+
+
+
+<div deckgrid class="deckgrid" source="album.photos">
+		<div class="a-card">
+			<img src="" data-ng-src="{{card.thumbSrc}}">
+			<!-- <span class="glyphicon glyphicon-plus" data-ng-click="mother.followPhoto(card)"></span> -->
+			<span ng-show="removePhotos" class="glyphicon glyphicon-remove-sign" data-ng-click="mother.removeFromAlbum(photo)"></span>
+			<span ng-show="selectingCover" class="glyphicon glyphicon-plus" data-ng-click="mother.addCover(photo)"></span>
+		</div>
+	</div>
