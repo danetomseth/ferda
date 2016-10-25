@@ -1,4 +1,4 @@
-app.controller('PhotoCtrl', ($scope, $state, PhotosFactory, AlbumFactory, UserFactory) => {
+app.controller('PhotoCtrl', ($scope, $state, PhotosFactory, AlbumFactory, UserFactory, photos) => {
     let albumArray = [];
     $scope.title = "Welcome";
     $scope.photosGot = false;
@@ -6,13 +6,16 @@ app.controller('PhotoCtrl', ($scope, $state, PhotosFactory, AlbumFactory, UserFa
         $state.go('addphoto');
     }
 
-    AlbumFactory.fetchAll()
-        .then(albums => {
-            $scope.albums = albums;
-        })
-    PhotosFactory.fetchAll().then(photos => {
-        $scope.photos = photos;
-    })
+    // AlbumFactory.fetchAll()
+    //     .then(albums => {
+    //         $scope.albums = albums;
+    //     })
+    // PhotosFactory.fetchAll().then(photos => {
+    //     $scope.photos = photos;
+    // })
+    console.log(photos);
+
+    $scope.photos = photos
 
     $scope.addPhotos = () => {
         for (var i = 1; i <= 44; i++) {

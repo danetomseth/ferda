@@ -1,6 +1,6 @@
 {
-  "name": "FullstackGeneratedApp",
-  "description": "A generated project at Fullstack Academy",
+  "name": "ZTF",
+  "description": "Photo Sharing",
   "main": "server/start.js",
   "authors": [
     "danetomseth <danetomseth@gmail.com>"

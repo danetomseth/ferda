@@ -1,4 +1,4 @@
-<md-card>
+<!-- <md-card>
 		<md-card-title class="title-sm">
 			<md-card-title-text>
 				<span class="md-headline">{{album.title}}</span>
@@ -20,5 +20,23 @@
 				</md-button>
 			</md-card-actions>
 		</md-card-content>
-	</md-card>
+	</md-card> -->
+
+		<div class="zt-content-box">
+		<div class="zt-content-box-header zt-primary"><h3>{{album.title}}</h3><i class="zt-white glyph-icon fa-heart" ></i> <i class="zt-white glyph-icon fa-pencil" ></i></div>
+			<div class="zt-content-box-wrapper">
+				
+				<div ng-if="album.cover.thumbSrc" class="zt-album-cover" zt-set-size>
+					<img ng-src="{{album.cover.thumbSrc}}" alt="">
+				</div>
+				<div class="zt-no-cover zt-center" ng-if="!album.cover.thumbSrc" zt-set-size>
+					<i class="zt-white glyph-icon fa-picture-o fa-5x" ></i>
+				</div>
+				<div class="text-center zt-card-actions">
+					<md-button class="md-primary" ng-click="viewAlbum()">View</md-button>
+				</div>
+			</div>
+		</div>
+
+
 

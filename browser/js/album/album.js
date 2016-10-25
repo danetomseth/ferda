@@ -1,10 +1,7 @@
 app.config(function ($stateProvider) {
     $stateProvider.state('album', {
         url: '/Album',
-        templateUrl: 'js/album/album.html',
-        data: {
-            authenticate: true
-        }
+        templateUrl: 'js/album/album.html'
 
     });
 });
@@ -15,9 +12,6 @@ app.config(function ($stateProvider) {
         url: '/Album/:albumId',
         templateUrl: 'js/album/single-album.html',
         controller: 'SingleAlbumCtrl',
-        data: {
-            authenticate: true
-        },
         resolve: {
         	album: (AlbumFactory, $stateParams) => {
         		return AlbumFactory.fetchOne($stateParams.albumId)

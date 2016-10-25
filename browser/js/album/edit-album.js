@@ -3,9 +3,6 @@ app.config(($stateProvider) => {
 		url: '/editAlbum/:albumId',
 		templateUrl: 'js/album/edit-album.html',
 		controller: 'EditAlbumCtrl',
-		data: {
-            authenticate: true
-        },
 		resolve: {
 			album: (AlbumFactory, $stateParams) => {
 				return AlbumFactory.fetchOne($stateParams.albumId)

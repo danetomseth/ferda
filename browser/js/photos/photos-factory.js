@@ -25,6 +25,12 @@ app.factory('PhotosFactory', ($http) => {
 			.then(res => {
 				return res.data;
 			})
+		},
+		getFiles: () => {
+			$http.get('/api/getFiles/albumA')
+			.then(res => {
+				console.log("Returned: ", res.data);
+			})
 		}
 	}
 });
