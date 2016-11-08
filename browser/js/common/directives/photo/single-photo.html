@@ -8,7 +8,7 @@
 	<img ng-src="{{photo.thumbSrc}}" alt="" class="img-responsive" imageonload/>
 	<span ng-show="photo.visible">
 	<!-- Image Hover -->
-	<div class="image-hover bg-red ui-right">
+	<div class="image-hover bg-red ui-right" ng-if="editMode">
 		<h3><a href="#">Lipsum</a></h3>
 		<p>Sed perspic unde omnis iste natu volupta accusant laudan.</p>
 	</div>

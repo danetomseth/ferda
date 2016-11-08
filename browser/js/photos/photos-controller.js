@@ -1,8 +1,9 @@
-app.controller('PhotoCtrl', ($scope, $state, PhotosFactory, AlbumFactory, UserFactory, photos) => {
+app.controller('PhotoCtrl', ($scope, $state, PhotosFactory, AlbumFactory, UserFactory, $window, photos) => {
     let albumArray = [];
     $scope.title = "Welcome";
     $scope.photosGot = false;
     $scope.selectedPage = 0;
+    $scope.active = 5;
 
 
     // $scope.photos = shuffle(photos);
@@ -59,30 +60,15 @@ app.controller('PhotoCtrl', ($scope, $state, PhotosFactory, AlbumFactory, UserFa
     }
 
 
-    // function galleryPhotos (){
-    // 	let array = $scope.photoPages[0];
-    // 	let items = []
-    // 	array.forEach(function(elem) {
-    // 		let img = new Image();
-    // 		img.src = elem.src;
-    // 		console.log(img.width);
-    // 		let newImg = {
-    // 			src: elem.src,
-    // 			w: 1200,
-    // 			h: 800
-    // 		}
-    // 		items.push(newImg);
-    // 	})
-    // 	console.log(items);
-    // 	$scope.galleryPhotos = items;
-    // }
 
     $scope.openGallery = (index) => {
-   		$scope.showGallery = true;
+   		
    		let slideIndex = index
     	$scope.slideIndex = index;
     	console.log(index);
-    	$scope.active = index;
+    	// $scope.active = index;
+        $scope.active = index;
+
     	let imgArray = $scope.photoPages[$scope.selectedPage]
    	 	imgArray.forEach(function(elem, index) {
    	 		elem.id = index;
@@ -90,8 +76,16 @@ app.controller('PhotoCtrl', ($scope, $state, PhotosFactory, AlbumFactory, UserFa
    	 			elem.active = true;
    	 			console.log("active:", elem);
    	 		}
+            else {
+                elem.active = false;
+            }
    	 	})
+        console.log(imgArray);
        $scope.galleryPhotos = imgArray;
+       $scope.showGallery = true;
+       
+       
+       // $window.scrollTo(0, 0);
     }
 
     $scope.show = (photo) => {
@@ -99,6 +93,12 @@ app.controller('PhotoCtrl', ($scope, $state, PhotosFactory, AlbumFactory, UserFa
    	 	
 
     }
+
+    $scope.closeGallery = () => {
+        $scope.showGallery = false;
+    }
+
+    $scope.editMode = false;
 
 
 

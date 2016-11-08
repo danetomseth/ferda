@@ -42,6 +42,12 @@ app.factory('PhotosFactory', ($http) => {
 				console.log("res: ", res.data);
 				return res.data;
 			})
+		},
+		fetchAllRandom: () => {
+			return $http.get('/api/photos/randomall').then(res => {
+				console.log("res: ", res.data);
+				return res.data;
+			})
 		}
 	}
 });

@@ -5,7 +5,8 @@ app.config(function ($stateProvider) {
         controller: 'PhotoCtrl',
         resolve: {
             photos: (PhotosFactory, $stateParams) => {
-                return PhotosFactory.fetchAll()
+                // return PhotosFactory.fetchAll()
+                return PhotosFactory.fetchAllRandom();
             }
         }
     });

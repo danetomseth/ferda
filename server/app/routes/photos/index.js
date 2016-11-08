@@ -54,6 +54,19 @@ router.get('/random/:limit', (req, res, next) => {
 });
 
 
+router.get('/randomall', (req, res, next) => {
+    Photo.findRandom().exec(function(err, photos) {
+        if(err) {
+            console.log('err fetching random photos', err);
+            next(err)
+        }
+        else {
+            res.send(photos)
+        }
+    })
+});
+
+
 router.post('/add', (req, res, next) => {
     Photo.create(req.body)
         .then((photo, err) => {
