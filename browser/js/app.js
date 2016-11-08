@@ -26,7 +26,7 @@ app.config(function ($urlRouterProvider, $locationProvider, $mdThemingProvider) 
 
    $mdThemingProvider.theme('default')
        .primaryPalette('blue')
-       .accentPalette('light-green')
+       .accentPalette('purple')
        .warnPalette('yellow')
 });
 

@@ -1,14 +1,47 @@
+<div ng-cloak>
+	
+<div flex>
+	<h3 class="p-title p-title-no-margin">
+		<span>All Photos</span>
+	</h3>
 
+</div>
+
+
+
+<div class="text-center">
+	<ul class="pagination pagination-lg">
+		<li ng-click="backward()"><a >«</a></li>
+		<li ng-class="{'active': selectedPage === $index}"" ng-click="setPage($index)" ng-repeat="page in photoPages"><a >{{$index + 1}}</a></li>
+		<li ng-click="forward()"><a >»</a></li>
+	</ul>
+</div>
+
+			<div ng-repeat="page in photoPages" ng-if="selectedPage === $index">
+				<div class="ui-69">
+					<div layout="row" layout-wrap layout-padding>
+					<div flex="20" ng-repeat="photo in page">
+							<single-photo photo="photo" ng-click="openGallery($index)"></single-photo>
+						</div>
+					</div>
+				</div> 
+			</div>
+
+
+<div class="text-center">
+	<ul class="pagination pagination-lg">
+		<li><a ng-click="forward()">«</a></li>
+		<li ng-class="{'active': selectedPage === $index}"" ng-click="setPage($index)" ng-repeat="page in photoPages"><a >{{$index + 1}}</a></li>
+		<li><a ng-click="backward()">»</a></li>
+	</ul>
+</div>
+<div ng-if="showGallery">
+	<photo-gallery></photo-gallery>
+</div>
+<md-button class="md-primary" ng-click="show()">Show</md-button>
+</div>
 
 <!-- 
-<div ng-cloak deckgrid class="deckgrid" source="photos">
-    <div class="a-card">
-        <img src="" data-ng-src="{{card.thumbSrc}}">
-    </div>
-</div> -->
-
-
-
 <div>
 
   <div layout="row" layout-wrap>
@@ -22,4 +55,4 @@
 
   </div>
 
-</div>
+</div> -->

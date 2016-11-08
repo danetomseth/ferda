@@ -8,7 +8,6 @@ app.directive('singlePhoto', ($rootScope, $state) => {
 		link: (scope) => {
 			scope.viewPhoto = () => {
 				console.log(scope.photo);
-				// $state.go('editphoto', {photoId: scope.photo._id});
 			}
 
 			

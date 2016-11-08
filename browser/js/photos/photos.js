@@ -11,20 +11,7 @@ app.config(function ($stateProvider) {
     });
 });
 
-app.config(function ($stateProvider) {
-    $stateProvider.state('addphoto', {
-        url: '/photos',
-        templateUrl: 'js/photos/photos-add.html',
-        controller: 'PhotoCtrl'
-    });
-});
 
 
-app.config(function ($stateProvider) {
-    $stateProvider.state('uploadPhotos', {
-        url: '/upload',
-        templateUrl: 'js/photos/photos-upload.html',
-        controller: 'UploadPhotoCtrl'
-    });
-});
+
 

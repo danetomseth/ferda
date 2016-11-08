@@ -1,43 +1,35 @@
-<div  layout="column" layout-padding ng-cloak>
-  <br/>
-  <md-content class="md-no-momentum">
-    <md-input-container class="md-icon-float md-block">
-      <!-- Use floating label instead of placeholder -->
-      <label>Title</label>
-      <md-icon md-svg-src="/icons/ic_label_outline_24px.svg" class="name"></md-icon>
-      <input ng-model="album.title" type="text" ng-required="true">
-    </md-input-container>
-    <div layout-gt-xs="row">
-    <md-input-container md-no-float class="md-block flex-gt-xs">
-    <label>Photo Count: {{album.photos.length}}</label>
-            <md-icon md-svg-src="/icons/ic_label_outline_24px.svg" class="name"></md-icon>
+<div layout="row" layout-padding ng-cloak layout-align="center" >
+  <md-content flex="75" md-whiteframe="4dp">
+    <div flex>
+      <h3 class="p-title p-title-no-margin">
+      <span>Edit {{album.title}}</span>
+      </h3>
 
-      <input ng-model="album.photos.length" type="text" placeholder="# Photos">
-    </md-input-container>
-    <md-button class="md-primary md-raised" ng-click="addPhotos()">Add</md-button>
     </div>
-    
-    <div layout-gt-xs="row">
-    	<md-input-container class="md-block flex-gt-xs">
-    <label>Followers</label>
-            <md-icon md-svg-src="/icons/ic_label_outline_24px.svg" class="name"></md-icon>
-
-      <input ng-model="album.followers" placeholder="Count:" >
+    <md-input-container layout="row" layout-padding>
+      <div flex="initial" class="zt-center">
+        <i class="fa fa-tag fa-2x" aria-hidden="true"></i>
+      </div>
+      <div flex>
+        <input ng-model="album.title" type="text" ng-required="true">
+      </div>
     </md-input-container>
-      <md-datepicker ng-model="album.date" mdp-format="DD/MM/YYYY" md-placeholder="Enter date">
-	</md-datepicker>
-	</div>
-    <md-input-container class="md-block">
-    	<md-icon md-svg-src="/icons/ic_picture_in_picture_24px.svg" class="name"></md-icon>
-    	<div class="input-block">
-   		<img ng-src="{{album.cover}}" ng-if="album.cover"/>
-   		<p ng-if="!album.cover">No Cover</p>
-   		</div>
+    <md-input-container layout="row" layout-padding>
+      <div flex="initial" class="zt-center">
+        <i class="fa fa-hashtag fa-2x" aria-hidden="true"></i>
+      </div>
+      <div flex>
+        Photo Count:
+        <input ng-model="album.photos.length" type="text" >
+      </div>
     </md-input-container>
-    <md-input-container class="md-block">
-    	<div layout="row" layout-align="end">
-    	<md-button class="md-primary md-raised align-right" ng-click="saveAlbum()">Save</md-button>
-    	</div>
+    <md-input-container layout="row" layout-padding>
+      <div flex="initial" class="zt-center">
+        <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+      </div>
+      <div flex>
+        <md-button class="md-primary md-raised" ng-click="addPhotos()">Add Photos</md-button>
+      </div>
     </md-input-container>
   </md-content>
 </div>
@@ -45,13 +37,25 @@
 
 
 
-<div id="imageThumbs" ng-show="selectingPictures">
+<!-- <div ng-show="selectingPictures">
+  <div layout="row" layout-wrap>
+    <div flex="20" class="ui-item" ng-click="addToAlbum(photo)" ng-repeat="photo in photos">
+      <img ng-src="{{photo.thumbSrc}}" alt="" class="img-responsive" />
 
-<div id="imageBox" class="md-whiteframe-3dp" ng-repeat="photo in photos">
-  <img ng-src="{{photo.thumbSrc}}" ng-click="addToAlbum(photo)" alt="">
-</div>
-</div>
+    </div>
 
+  </div>
+</div> -->
+
+<div class="ui-69" ng-show="selectingPictures">
+        <div layout="row" layout-wrap layout-margin>
+          <div flex="20" ng-repeat="photo in photos">
+            <!-- Item -->
+            <single-photo photo="photo"></single-photo>
+          </div>
+      
+        </div>
+    </div>
 
 
 

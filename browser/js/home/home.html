@@ -1,34 +1,20 @@
-<banner></banner> 
+<!-- <banner></banner>  -->
+
+<!-- <div layout="row" flex-wrap layout-margin layout-align="center">
+  <div zt-size="300x300" abs="true" class="zt-center zt-primary zt-link" ui-sref="albums">Albums</div>
+  <div zt-size="300x300" abs="true" class="zt-center zt-primary zt-link" ui-sref="newAlbum">New Album</div>
+  <div zt-size="300x300" abs="true" class="zt-center zt-primary zt-link" ui-sref="upload">Upload Photo</div>
+  <div zt-size="300x300" abs="true" class="zt-center zt-primary zt-link" ui-sref="layout">Layout</div>
 
 
+</div> -->
 
 
-
-<!-- <md-toolbar class="md-theme-light">
-    <h2 class="md-toolbar-tools">
-      <span>Welcome</span>
-    </h2>
-  </md-toolbar>
-<md-content>
-    <md-list>
-        <md-list-item class="md-3-line">
-            <div class="md-list-item-text">
-          <h3>who</h3>
-          <h4>what</h4>
-          <p>where</p>
-        </div>
-        <md-button class="md-secondary">Respond</md-button>
-        </md-list-item>
-        <md-list-item class="md-3-line">
-            <div class="md-list-item-text">
-          <h3>who</h3>
-          <h4>what</h4>
-          <p>where</p>
-        </div>
-        <md-button class="md-secondary">Respond</md-button>
-        </md-list-item>
-          <md-divider></md-divider>
-        <md-list-item>Third</md-list-item>
-    </md-list>
-
-</md-content>
+<div class="zt-home">
+	
+<div id="owl-demo" class="mt-home-gallery">
+  <div class="mt-home-gallery-item" ng-repeat="photo in slidePhotos" >
+    <img ng-src="{{photo.thumbSrc}}" alt="Image">
+  </div>
+</div>
+</div>

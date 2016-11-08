@@ -1,0 +1,12 @@
+
+
+<div class="zt-gallery">
+    <div class="zt-gallery-wrapper" uib-carousel active="active" no-wrap="noWrapSlides">
+      <div class="zt-gallery-slide"  uib-slide ng-repeat="slide in galleryPhotos track by slide.id" index="slide.id">
+        <img ng-src="{{slide.src}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{slide.id}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>

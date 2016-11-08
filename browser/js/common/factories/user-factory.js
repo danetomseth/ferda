@@ -22,21 +22,6 @@ app.factory('UserFactory', ($http, $rootScope, DialogFactory) => {
 			});
 		},
 
-		//User settings
-		// followAlbum: (albumId) => {
-		// 	let body = {
-		// 		albumId: albumId,
-		// 		userId: $rootScope.user._id
-		// 	}
-		// 	$http.post('/api/users/album', body).then(res => {
-		// 		if(res.status === 200) {
-		// 			DialogFactory.display('Added To Albums', 1000)
-		// 		}
-		// 		else {
-		// 			DialogFactory.display('Status not 200', 1000)
-		// 		}
-		// 	})
-		// }
 		followAlbum: (album) => {
 			let user = $rootScope.user
 			if(user.albums.indexOf() !== -1) {

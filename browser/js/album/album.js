@@ -1,11 +1,3 @@
-app.config(function ($stateProvider) {
-    $stateProvider.state('album', {
-        url: '/Album',
-        templateUrl: 'js/album/album.html'
-
-    });
-});
-
 
 app.config(function ($stateProvider) {
     $stateProvider.state('singleAlbum', {

@@ -1,0 +1,31 @@
+.zt-gallery {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.8);
+	z-index: 10;
+	padding: 100px 50px;
+}
+
+
+.zt-gallery-wrapper {
+	margin: 0 auto;
+	height: 100%;
+}
+
+
+.zt-gallery-slide {
+	height: 100%;
+}
+
+.zt-gallery-slide img {
+	height: 100% !important;
+	width: auto !important;
+}
+
+
+.carousel-inner {
+	height: 100% !important;
+}
